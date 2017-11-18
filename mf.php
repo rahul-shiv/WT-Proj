@@ -1,5 +1,4 @@
-<!-- <!DOCTYPE html> -->
-<?php require 'itemdisp.php' ?>
+<?php require 'itemdisp.php'?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="stuff.css">
@@ -7,6 +6,42 @@
 
 body {margin:0;}
 
+.container {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 .before {
@@ -89,14 +124,17 @@ body {margin:0;}
   opacity: 1;
   right: -30px;
 }
+.main {
+    margin-left:20%;padding:0px 16px;
+margin-top: 56px; /* Add a top margin to avoid content overlay */
+    z-index: -1;
+}
 
 </style>
 
 <link rel="stylesheet" href="w3.css">
 </head>
 <body>
-
-
 
 <div class="nav">
 
@@ -142,22 +180,22 @@ body {margin:0;}
 </div>
 <div class="sidebar">
 <ul>
-  <li><a  href="mt.php?name=MT">T-Shirts</a></li>
-  <li><a class="active" href="ms.php?name=MS">Shirts</a></li>
-  <li><a href="mb.php?name=MB">Bottoms</a></li>
-  <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
-  <li>  <a href="ma.php?name=MA">Accessories</a></li>
-  <li><a href="mf.php?name=MF">Footwear</a></li>
+    <li><a  href="mt.php?name=MT">T-Shirts</a></li>
+    <li><a href="ms.php?name=MS">Shirts</a></li>
+    <li><a href="mb.php?name=MB">Bottoms</a></li>
+    <li><a href="mspo.php?name=MPSO">Sportswear</a></li>
+    <li>  <a href="ma.php?name=MA">Accessories</a></li>
+    <li><a class="active" href="mf.php?name=MF">Footwear</a></li>
 </ul>
 </div>
 <div class="main">
-
+<!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
 <?php
     display();
-?>
-
+ ?>
 <button class="before"style="vertical-align:middle" onclick="plusDivs(-1)"><span>Previous</span></button>
 <button class="after" style="vertical-align:middle" onclick="plusDivs(1)"><span>Next</span></button>
+
 </div>
 
 <script>
@@ -180,9 +218,7 @@ function showDivs(n) {
 }
 </script>
 
-
 </body>
 
 <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
 </html>
-<!--  -->

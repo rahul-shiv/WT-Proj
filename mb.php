@@ -9,6 +9,7 @@ body {margin:0;}
 
 
 
+
 .before {
   display: inline-block;
   border-radius: 4px;
@@ -90,74 +91,73 @@ body {margin:0;}
   right: -30px;
 }
 
+
 </style>
 
 <link rel="stylesheet" href="w3.css">
 </head>
 <body>
 
-
-
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
-      <li class="dropdown">
-        <a href="#men" class="dropbtn">MEN</a>
-        <div class="dropdown-content">
-          <a href="mt.php?name=MT">T-Shirts</a>
-          <a href="ms.php?name=MS">Shirts</a>
-          <a href="mb.php?name=MB">Bottoms</a>
-          <a href="mspo.php?name=MSPO">Sportswear</a>
-          <a href="ma.php?name=MA">Accessories</a>
-          <a href="mf.php?name=MF">Footwear</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="#women" class="dropbtn">WOMEN</a>
-        <div class="dropdown-content">
-            <a href="we.php?name=WE">Ethnicwear</a>
-            <a href="wt.php?name=WT">Tops</a>
-            <a href="ws.php?name=WS">Skirts and Dresses</a>
-            <a href="wb.php?name=WB">Bottomwear</a>
-            <a href="wa.php?name=WA">Accessories</a>
-            <a href="wf.php?name=WF">Footwear</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="#shoes" class="dropbtn">FOOTWEAR</a>
-        <div class="dropdown-content">
-          <a href="wf.php?name=WF">Women's Footwear</a>
-          <a href="mf.php?name=MF">Men's Footwear</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="#acc" class="dropbtn">ACCESSORIES</a>
-        <div class="dropdown-content">
-          <a href="wa.php?name=WA">Women's Accessories</a>
-          <a href="ma.php?name=MA">Men's Accessories</a>
-        </div>
-      </li>
+          <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
+          <li class="dropdown">
+            <a href="#men" class="dropbtn">MEN</a>
+            <div class="dropdown-content">
+              <a href="mt.php?name=MT">T-Shirts</a>
+              <a href="ms.php?name=MS">Shirts</a>
+              <a href="mb.php?name=MB">Bottoms</a>
+              <a href="mspo.php?name=MSPO">Sportswear</a>
+              <a href="ma.php?name=MA">Accessories</a>
+              <a href="mf.php?name=MF">Footwear</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#women" class="dropbtn">WOMEN</a>
+            <div class="dropdown-content">
+                <a href="we.php?name=WE">Ethnicwear</a>
+                <a href="wt.php?name=WT">Tops</a>
+                <a href="ws.php?name=WS">Skirts and Dresses</a>
+                <a href="wb.php?name=WB">Bottomwear</a>
+                <a href="wa.php?name=WA">Accessories</a>
+                <a href="wf.php?name=WF">Footwear</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#shoes" class="dropbtn">FOOTWEAR</a>
+            <div class="dropdown-content">
+              <a href="wf.php?name=WF">Women's Footwear</a>
+              <a href="mf.php?name=MF">Men's Footwear</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#acc" class="dropbtn">ACCESSORIES</a>
+            <div class="dropdown-content">
+              <a href="wa.php?name=WA">Women's Accessories</a>
+              <a href="ma.php?name=MA">Men's Accessories</a>
+            </div>
+          </li>
     </ul>
 </div>
 <div class="sidebar">
 <ul>
-  <li><a  href="mt.php?name=MT">T-Shirts</a></li>
-  <li><a class="active" href="ms.php?name=MS">Shirts</a></li>
-  <li><a href="mb.php?name=MB">Bottoms</a></li>
-  <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
-  <li>  <a href="ma.php?name=MA">Accessories</a></li>
-  <li><a href="mf.php?name=MF">Footwear</a></li>
+    <li><a  href="mt.php?name=MT">T-Shirts</a></li>
+    <li><a href="ms.php?name=MS">Shirts</a></li>
+    <li><a class="active" href="mb.php?name=MB">Bottoms</a></li>
+    <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
+    <li>  <a href="ma.php?name=MA">Accessories</a></li>
+    <li><a href="mf.php?name=MF">Footwear</a></li>
 </ul>
 </div>
 <div class="main">
-
+<!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
 <?php
     display();
 ?>
-
 <button class="before"style="vertical-align:middle" onclick="plusDivs(-1)"><span>Previous</span></button>
 <button class="after" style="vertical-align:middle" onclick="plusDivs(1)"><span>Next</span></button>
+
 </div>
 
 <script>
@@ -185,4 +185,3 @@ function showDivs(n) {
 
 <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
 </html>
-<!--  -->

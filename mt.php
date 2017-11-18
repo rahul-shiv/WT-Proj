@@ -1,11 +1,12 @@
 <!-- <!DOCTYPE html> -->
-<?php require 'itemdisp.php' ?>
+<?php require 'itemdisp.php'?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="stuff.css">
 <style>
 
 body {margin:0;}
+
 
 
 
@@ -90,13 +91,43 @@ body {margin:0;}
   right: -30px;
 }
 
+.floating-box{
+	display:inline-block;
+	width:300px;
+	height:340px;
+	margin:10px;
+	padding-bottom:40px;
+	margin-bottom:30px;
+	cursor:pointer;
+}
+.floating-box:hover{
+  transition: 0.4s;
+  opacity: 0.6;
+}
+.floating-box #title{
+  color:white;
+  font-family:sans-serif;
+  font-size: :25px;
+  font-weight: bold;
+}
+.floating-box #price{
+  padding-right: 28px;
+  color:white;
+  text-align: right;
+  font-style: italic;
+  text-shadow: 1px 2px #5c5d60;
+}
+.floating-box img{
+  box-shadow: 7px 10px 15px black;
+  width: 90%;
+  height: 90%;
+
+}
 </style>
 
 <link rel="stylesheet" href="w3.css">
 </head>
 <body>
-
-
 
 <div class="nav">
 
@@ -142,22 +173,21 @@ body {margin:0;}
 </div>
 <div class="sidebar">
 <ul>
-  <li><a  href="mt.php?name=MT">T-Shirts</a></li>
-  <li><a class="active" href="ms.php?name=MS">Shirts</a></li>
-  <li><a href="mb.php?name=MB">Bottoms</a></li>
-  <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
-  <li>  <a href="ma.php?name=MA">Accessories</a></li>
-  <li><a href="mf.php?name=MF">Footwear</a></li>
+    <li><a class="active" href="mt.php?name=MT">T-Shirts</a></li>
+    <li><a href="ms.php?name=MS">Shirts</a></li>
+    <li><a href="mb.php?name=MB">Bottoms</a></li>
+    <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
+    <li>  <a href="ma.php?name=MA">Accessories</a></li>
+    <li><a href="mf.php?name=MF">Footwear</a></li>
 </ul>
 </div>
 <div class="main">
-
-<?php
-    display();
-?>
-
+    <?php
+        display();
+    ?>
 <button class="before"style="vertical-align:middle" onclick="plusDivs(-1)"><span>Previous</span></button>
 <button class="after" style="vertical-align:middle" onclick="plusDivs(1)"><span>Next</span></button>
+
 </div>
 
 <script>
@@ -178,6 +208,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+
 </script>
 
 
@@ -185,4 +216,3 @@ function showDivs(n) {
 
 <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
 </html>
-<!--  -->
