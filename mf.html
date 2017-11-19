@@ -3,131 +3,131 @@
 <link rel="stylesheet" type="text/css" href="stuff.css">
 <style>
 
-body {margin:0;}
+  body {margin:0;}
 
-.container {
-    position: relative;
+  .container {
+      position: relative;
+      text-align: center;
+      color: black;
+  }
+
+  .bottom-left {
+      position: absolute;
+      bottom: 0px;
+      left: 5px;
+  }
+
+  .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+  }
+
+  .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+  .bottom-right {
+      position: absolute;
+      bottom: 0px;
+      right: 5px;
+  }
+
+  .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+
+  .before {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
     text-align: center;
-    color: black;
-}
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
 
-.bottom-left {
+  .before span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .before span:after {
+    content: '«';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: 0px;
+    transition: 0.5s;
+  }
+
+  .before:hover span {
+    padding-left: 25px;
+  }
+
+  .before:hover span:after {
+    opacity: 1;
+    right: 130px;
+  }
+
+  .after {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    float: right;
+  }
+
+  .after span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .after span:after {
+    content: '»';
     position: absolute;
-    bottom: 0px;
-    left: 5px;
-}
+    opacity: 0;
+    top: 0;
+    right: 0px;
+    transition: 0.5s;
+  }
 
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
+  .after:hover span {
+    padding-right: 25px;
+  }
 
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 0px;
-    right: 5px;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.before {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.before span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.before span:after {
-  content: '«';
-  position: relative;
-  opacity: 0;
-  top: 0;
-  right: 0px;
-  transition: 0.5s;
-}
-
-.before:hover span {
-  padding-left: 25px;
-}
-
-.before:hover span:after {
-  opacity: 1;
-  right: 130px;
-}
-
-.after {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 20px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-  float: right;
-}
-
-.after span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.after span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: 0px;
-  transition: 0.5s;
-}
-
-.after:hover span {
-  padding-right: 25px;
-}
-
-.after:hover span:after {
-  opacity: 1;
-  right: -30px;
-}
-.main {
-    margin-left:20%;padding:0px 16px;
-margin-top: 56px; /* Add a top margin to avoid content overlay */
-    z-index: -1;
-}
+  .after:hover span:after {
+    opacity: 1;
+    right: -30px;
+  }
+  .main {
+      margin-left:20%;padding:0px 16px;
+  margin-top: 56px; /* Add a top margin to avoid content overlay */
+      z-index: -1;
+  }
 
 </style>
 
@@ -178,14 +178,14 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
     </ul>
 </div>
 <div class="sidebar">
-<ul>
-    <li><a  href="mt.html">T-Shirts</a></li>
-    <li><a href="ms.html">Shirts</a></li>
-    <li><a href="mb.html">Bottomwear</a></li>
-    <li><a href="mspo.html">Sportswear</a></li>
-    <li><a href="ma.html">Accessories</a></li>
-    <li><a  class="active" href="mf.html">Footwear</a></li>
-</ul>
+  <ul>
+      <li><a  href="mt.html">T-Shirts</a></li>
+      <li><a href="ms.html">Shirts</a></li>
+      <li><a href="mb.html">Bottomwear</a></li>
+      <li><a href="mspo.html">Sportswear</a></li>
+      <li><a href="ma.html">Accessories</a></li>
+      <li><a  class="active" href="mf.html">Footwear</a></li>
+  </ul>
 </div>
 <div class="main">
 <!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->

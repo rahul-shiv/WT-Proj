@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="stuff.css">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+  li {
+      float:left;
+  }
+  .bottomlist {float: left;}
+  li a, .dropbtn {
+      color: gray;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+  li a:hover, .dropdown:hover .dropbtn {
+    /*  background-color: lightgray;*/
+  }
+  li.dropdown {
+  }
 
-body {margin:0;
-	background-image: url("bg1.jpg");}
+  .bot li{
+      text-indent: -120px;
+      padding-left : 100px;
+      padding-right: 40px;
+      text-align: left;
+  }
+  .bot1 li{
+      text-indent: 30px;
+      padding-left : 30px;
+      padding-right: 40px;
+      text-align: left;
+  }
+  .dropdown-content {
+      display: none;
+      position: relative;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 99;
+  }
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
 
-.container {
-    position: relative;
-    text-align: center;
-    color: black;
-}
+  .nav {
+      /*overflow: hidden;*/
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      width: 100%; /* Full width */
+      z-index: 100;
+  }
+  .main {
+      margin-top: 1000px; /* Add a top margin to avoid content overlay */
+      z-index: -1;
+  }
 
-.bottom-left {
-    position: absolute;
-    bottom: 0px;
-    left: 5px;
-}
-
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
-
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 0px;
-    right: 5px;
-}
-.main {
-    margin-top: 100px; /* Add a top margin to avoid content overlay */
-    z-index: -1;
-}
-
+  .bodyclass{padding:0.01em 16px;
+    margin-top:0;margin-bottom:16px;}
+  .dispp{position: relative;}
+  .btn{border:none; padding:12px 24px!important;
+    display:inline-block;
+    padding:8px 16px;text-decoration: none;
+    vertical-align:middle;
+    font-size: 18px;
+    color:white;background-color:black;
+    text-align:center;}
+  .btn:hover{color:black!important;background-color:#ccc!important}
+  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
-
 <link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" type="text/css" href="stuff.css">
 </head>
-<body>
+<body class="bodyclass" style="background-image:url('bg1.jpg');max-width:1200px">
 
+<!-- Sidebar/menu -->
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="#home">HOME</a></big></strong></li>
+      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
       <li class="dropdown">
         <a href="#men" class="dropbtn">MEN</a>
         <div class="dropdown-content">
-            <a href="mt.html">T-Shirts</a>
-            <a href="ms.html">Shirts</a>
-            <a href="mb.html">Bottoms</a>
-            <a href="mspo.html">Sportswear</a>
-            <a href="ma.html">Accessories</a>
-            <a href="mf.html">Footwear</a>
+          <a href="mt.html">T-Shirts</a>
+          <a href="ms.html">Shirts</a>
+          <a href="mb.html">Bottoms</a>
+          <a href="mspo.html">Sportswear</a>
+          <a href="ma.html">Accessories</a>
+          <a href="mf.html">Footwear</a>
         </div>
       </li>
       <li class="dropdown">
         <a href="#women" class="dropbtn">WOMEN</a>
         <div class="dropdown-content">
-          <a href="we.html">Ethnicwear</a>
-          <a href="wt.html">Tops</a>
-          <a href="ws.html">Skirts and Dresses</a>
-          <a href="wb.html">Bottomwear</a>
-          <a href="wa.html">Accessories</a>
-          <a href="wf.html">Footwear</a>
+            <a href="we.html">Ethnicwear</a>
+            <a href="wt.html">Tops</a>
+            <a href="ws.html">Skirts and Dresses</a>
+            <a href="wb.html">Bottomwear</a>
+            <a href="wa.html">Accessories</a>
+            <a href="wf.html">Footwear</a>
         </div>
       </li>
       <li class="dropdown">
@@ -89,65 +128,98 @@ body {margin:0;
       </li>
     </ul>
 </div>
-<div class="main">
-<!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
-<br>
-<br>
-<div class="w3-content" style="max-width:1000px;position:relative;">
 
-<img class="mySlides" src="p2.jpg" style="width:980px; height:300px">
+<!-- Top menu on small screens -->
 
-</div>
-</div>
-<br>
+<header>
+  <div >SHOP</div>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<!-- <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
+
+<!-- !PAGE CONTENT! -->
 <div>
-<div class="container">
-  <img src="hpwoman.jpg" style="float:left;width:500px; height:100%;padding-left:200px;">
-  <div class="bottom-left"><del>Rs.599</del></div>
-  <div class="bottom-right">Rs.499</div>
-	
-<img src="mhp5.jpeg" style="width:487px; height:100%;padding-right:200px;float:right;">
+
+  <!-- Push down content on small screens -->
+  <!-- <div class="w3-hide-large" style="margin-top:83px"></div> -->
+
+  <!-- Top header -->
+  <header  style="padding:2em;font-size:24px;">
+    <p style="float:left;">WOMEN'S</p>
+    <p  style="float:right;">
+      <i  style="margin-right:16px;">CART</i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <center>
+  <div class="bodyclass dispp">
+    <img src="womenhp.jpg" style="padding-left:10px;width:100%">
+    <div style="position:absolute;left:0;top:0;padding:24px 48px">
+      <h1 style="color:white;text-shadow:0 4px 4px 0;font-size:64px">New arrivals</h1>
+      <h1 style="color:white;text-shadow:0 4px 4px 0;">COLLECTION 2016</h1>
+      <p><a href="#options" class="btn">SHOP NOW</a></p>
+    </div>
+  </div>
+</center>
+
+  <div style="margin-top:16px;margin-bottom:16px;margin-left:25px;color:grey;" id="options">
+    <p>6 categories</p>
   </div>
 
+  <!-- Product grid -->
+  <center>
+  <div style="padding:0 8px">
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="wt.html"><img src="WT/wt1.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Tops</p>
+    </div>
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="wb.html"><img src="wb/wb16.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Bottoms</p>
+    </div>
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="wf.html"><img src="WF/wf1.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Footwear</p>
+    </div>
+  </div>
+  <div>
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="we.html"><img src="WE/we1.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Ethnic</p>
+    </div>
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="wsd.html"><img src="WSD/wsd1.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Skirts and Dresses</p>
+    </div>
+    <div class="bodyclass" style="display:inline-block;">
+        <a href="wa.html"><img src="WA/wa1.jpg" style="box-shadow: 0 4px 10px 0;width:250px"></a>
+        <p>Accessories</p>
+    </div>
 
-</div>
-<br><br><br><br>
-<br><br><br><br>
-<ul>
-USEFUL LINKS
-<ul class="bot">
-  <li><a href="#contactus">Contact Us</a>
-  <li><a href="#faq">FAQ</a>
-  <li><a href="#tnc">T&C</a>
-  <li><a href="#tou">Terms Of Use</a>
-  <li><a href="#to">Track Orders</a>
-  <li><a href="#shipping">Shipping</a>
-  <li><a href="#cancellation">Cancellation</a>
-  <li><a href="#returns">Returns</a>
+  </div>
+</center>
+
+
+<br><br><br>
+  <!-- Footer -->
+<footer>
+  <ul>
+  USEFUL LINKS
+  <ul class="bot">
+    <li><a href="#contactus">Contact Us</a>
+    <li><a href="#faq">FAQ</a>
+    <li><a href="#tnc">T & C</a>
+    <li><a href="#tou">Terms Of Use</a>
+    <li><a href="#to">Track Orders</a>
+    <li><a href="#shipping">Shipping</a>
+    <li><a href="#cancellation">Cancellation</a>
+    <li><a href="#returns">Returns</a>
+  </ul>
 </ul>
-</ul>
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+</footer>
 
 
 </body>
-
-<!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
 </html>
