@@ -17,7 +17,7 @@ body {margin:0;}
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
+      <li><big><strong><a class="active" href="proj.php">HOME</a></big></strong></li>
       <li class="dropdown">
         <a href="#men" class="dropbtn">MEN</a>
         <div class="dropdown-content">
@@ -41,18 +41,26 @@ body {margin:0;}
         </div>
       </li>
       <li class="dropdown">
-        <a href="#shoes" class="dropbtn">FOOTWEAR</a>
+        <a class="dropbtn">FOOTWEAR</a>
         <div class="dropdown-content">
           <a href="wf.html">Women's Footwear</a>
           <a href="mf.html">Men's Footwear</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="#acc" class="dropbtn">ACCESSORIES</a>
+        <a class="dropbtn">ACCESSORIES</a>
         <div class="dropdown-content">
           <a href="wa.html">Women's Accessories</a>
           <a href="ma.html">Men's Accessories</a>
         </div>
+      </li>
+      <li  id="cart">
+
+        <a href="cart.php">CART</a>
+    </li>
+      <li style="float:right;" >
+
+        <a href="logout.php"  >LOGOUT</a>
       </li>
     </ul>
 </div>

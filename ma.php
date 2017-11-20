@@ -1,7 +1,9 @@
 <!-- <!DOCTYPE html> -->
+<?php include("auth.php"); ?>
 <?php require 'itemdisp.php' ?>
 <html>
 <head>
+
 <link rel="stylesheet" type="text/css" href="stuff.css">
 <style>
 
@@ -30,6 +32,8 @@ body {margin:0;}
   position: relative;
   transition: 0.5s;
 }
+
+
 
 .before span:after {
   content: '«';
@@ -90,6 +94,7 @@ body {margin:0;}
   right: -30px;
 }
 
+
 </style>
 
 <link rel="stylesheet" href="w3.css">
@@ -99,9 +104,9 @@ body {margin:0;}
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
+      <li><big><strong><a class="active" href="proj.php">HOME</a></big></strong></li>
       <li class="dropdown">
-        <a href="#men" class="dropbtn">MEN</a>
+        <a href="men.php" class="dropbtn">MEN</a>
         <div class="dropdown-content">
           <a href="mt.php?name=MT">T-Shirts</a>
           <a href="ms.php?name=MS">Shirts</a>
@@ -112,7 +117,7 @@ body {margin:0;}
         </div>
       </li>
       <li class="dropdown">
-        <a href="#women" class="dropbtn">WOMEN</a>
+        <a href="women.php" class="dropbtn">WOMEN</a>
         <div class="dropdown-content">
             <a href="we.php?name=WE">Ethnicwear</a>
             <a href="wt.php?name=WT">Tops</a>
@@ -123,18 +128,26 @@ body {margin:0;}
         </div>
       </li>
       <li class="dropdown">
-        <a href="#shoes" class="dropbtn">FOOTWEAR</a>
+        <a class="dropbtn">FOOTWEAR</a>
         <div class="dropdown-content">
           <a href="wf.php?name=WF">Women's Footwear</a>
           <a href="mf.php?name=MF">Men's Footwear</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="#acc" class="dropbtn">ACCESSORIES</a>
+        <a class="dropbtn">ACCESSORIES</a>
         <div class="dropdown-content">
           <a href="wa.php?name=WA">Women's Accessories</a>
           <a href="ma.php?name=MA">Men's Accessories</a>
         </div>
+      </li>
+      <li  id="cart">
+
+        <a href="cart.php">CART</a>
+    </li>
+      <li style="float:right;" >
+
+        <a href="logout.php"  >LOGOUT</a>
       </li>
     </ul>
 </div>
@@ -158,25 +171,7 @@ body {margin:0;}
 
 </div>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+<script src='script.js' type="text/javascript"></script>
 
 
 </body>

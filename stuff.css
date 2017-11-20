@@ -1,3 +1,8 @@
+#cart a{
+    background-color: red;
+    position: absolute;
+    right:100px;
+}
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -29,7 +34,7 @@
 .nav .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 99;
@@ -43,7 +48,7 @@
     text-align: left;
 }
 
-.nav .dropdown-content a:hover {background-color: #f1f1f1}
+.nav .dropdown-content a:hover {background-color: #ccc}
 
 .nav .dropdown:hover .dropdown-content {
     display: block;
@@ -83,6 +88,7 @@
     background-color: #555;
     color: white;
 }
+.content1{max-width:980px;margin:auto}
 
 .blk {
     display: inline-block;
@@ -142,7 +148,34 @@
 
 .centered {
     position: absolute;
-    top: 50%;
+    top:110%;
     left: 50%;
+    width:100%;
     transform: translate(-50%, -50%);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 4%; /* Location of the box */
+    padding-bottom: 2%;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 750px;
+    border-radius: 10px;
 }

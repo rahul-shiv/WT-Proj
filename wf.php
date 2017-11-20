@@ -1,46 +1,11 @@
+<?php include("auth.php"); ?>
+<?php require 'itemdisp.php'?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="stuff.css">
 <style>
 
 body {margin:0;}
-
-.container {
-    position: relative;
-    text-align: center;
-    color: black;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 0px;
-    left: 5px;
-}
-
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
-
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 0px;
-    right: 5px;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 
 .before {
@@ -123,11 +88,7 @@ body {margin:0;}
   opacity: 1;
   right: -30px;
 }
-.main {
-    margin-left:20%;padding:0px 16px;
-margin-top: 56px; /* Add a top margin to avoid content overlay */
-    z-index: -1;
-}
+
 
 </style>
 
@@ -138,308 +99,71 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
+      <li><big><strong><a class="active" href="proj.php">HOME</a></big></strong></li>
       <li class="dropdown">
-        <a href="#men" class="dropbtn">MEN</a>
+        <a href="men.php" class="dropbtn">MEN</a>
         <div class="dropdown-content">
-          <a href="mt.html">T-Shirts</a>
-          <a href="ms.html">Shirts</a>
-          <a href="mb.html">Bottoms</a>
-          <a href="mspo.html">Sportswear</a>
-          <a href="ma.html">Accessories</a>
-          <a href="mf.html">Footwear</a>
+          <a href="mt.php?name=MT">T-Shirts</a>
+          <a href="ms.php?name=MS">Shirts</a>
+          <a href="mb.php?name=MB">Bottoms</a>
+          <a href="mspo.php?name=MSPO">Sportswear</a>
+          <a href="ma.php?name=MA">Accessories</a>
+          <a href="mf.php?name=MF">Footwear</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="#women" class="dropbtn">WOMEN</a>
+        <a href="women.php" class="dropbtn">WOMEN</a>
         <div class="dropdown-content">
-            <a href="we.html">Ethnicwear</a>
-            <a href="wt.html">Tops</a>
-            <a href="ws.html">Skirts and Dresses</a>
-            <a href="wb.html">Bottomwear</a>
-            <a href="wa.html">Accessories</a>
-            <a href="wf.html">Footwear</a>
+            <a href="we.php?name=WE">Ethnicwear</a>
+            <a href="wt.php?name=WT">Tops</a>
+            <a href="ws.php?name=WS">Skirts and Dresses</a>
+            <a href="wb.php?name=WB">Bottomwear</a>
+            <a href="wa.php?name=WA">Accessories</a>
+            <a href="wf.php?name=WF">Footwear</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="#shoes" class="dropbtn">FOOTWEAR</a>
+        <a class="dropbtn">FOOTWEAR</a>
         <div class="dropdown-content">
-          <a href="wf.html">Women's Footwear</a>
-          <a href="mf.html">Men's Footwear</a>
+          <a href="wf.php?name=WF">Women's Footwear</a>
+          <a href="mf.php?name=MF">Men's Footwear</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="#acc" class="dropbtn">ACCESSORIES</a>
+        <a class="dropbtn">ACCESSORIES</a>
         <div class="dropdown-content">
-          <a href="wa.html">Women's Accessories</a>
-          <a href="ma.html">Men's Accessories</a>
+          <a href="wa.php?name=WA">Women's Accessories</a>
+          <a href="ma.php?name=MA">Men's Accessories</a>
         </div>
+      </li>
+      <li  id="cart">
+
+        <a href="cart.php">CART</a>
+    </li>
+      <li style="float:right;" >
+
+        <a href="logout.php"  >LOGOUT</a>
       </li>
     </ul>
 </div>
 <div class="sidebar">
 <ul>
-    <li><a  href="we.html">Ethnic Wear</a></li>
-    <li><a href="wt.html">Tops</a></li>
-    <li><a href="ws.html">Skirts and Dresses</a></li>
-    <li><a href="wb.html">Bottomwear</a></li>
-    <li><a href="wa.html">Accessories</a></li>
-    <li><a  class="active" href="wf.html">Footwear</a></li>
+    <li><a  href="we.php?name=WE">Ethnic Wear</a></li>
+    <li><a href="wt.php?name=WT">Tops</a></li>
+    <li><a href="ws.php?name=WS">Skirts and Dresses</a></li>
+    <li><a href="wb.php?name=WB">Bottomwear</a></li>
+    <li><a  href="wa.php?name=WA">Accessories</a></li>
+    <li><a class="active" href="wf.php?name=WF">Footwear</a></li>
 </ul>
 </div>
 <div class="main">
 <!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
-<div class="mySlides">
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf1.jpg">
-        <div class="bottom-left"><del>Rs.3995</del></div>
-        <div class="bottom-right">Rs.2796</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf2.jpg">
-        <div class="bottom-left"><del>Rs.4795</del></div>
-        <div class="bottom-right">Rs.2877</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf3.jpg">
-        <div class="bottom-right">Rs.1617</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf4.jpg">
-        <div class="bottom-left"><del>Rs.2890</del></div>
-        <div class="bottom-right">Rs.2312</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf5.jpg">
-        <div class="bottom-left"><del>Rs.2599</del></div>
-        <div class="bottom-right">Rs.1559</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf6.jpg">
-        <div class="bottom-right">Rs.1399</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf7.jpg">
-        <div class="bottom-left"><del>Rs.3799</del></div>
-        <div class="bottom-right">Rs.2279</div>
-      </div>
-    </div>
-    <div class="blk">
-      <div class="container">
-        <img src="WF/wf8.jpg">
-        <div class="bottom-left"><del>Rs.1199</del></div>
-        <div class="bottom-right">Rs.959</div>
-      </div>
-    </div>
-
-</div>
-<div class="mySlides">
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf9.jpg">
-      <div class="bottom-left"><del>Rs.2999</del></div>
-      <div class="bottom-right">Rs.1499</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf10.jpg">
-      <div class="bottom-left"><del>Rs.1299</del></div>
-      <div class="bottom-right">Rs.649</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf11.jpg">
-      <div class="bottom-left"><del>Rs.3499</del></div>
-      <div class="bottom-right">Rs.1749</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf12.jpg">
-      <div class="bottom-left"><del>Rs.4795</del></div>
-      <div class="bottom-right">Rs.2877</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf13.jpg">
-      <div class="bottom-left"><del>Rs.3995</del></div>
-      <div class="bottom-right">Rs.1997</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf14.jpg">
-      <div class="bottom-right">Rs.3995</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf15.jpg">
-      <div class="bottom-left"><del>Rs.4190</del></div>
-      <div class="bottom-right">Rs.3142</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf16.jpg">
-      <div class="bottom-right">Rs.499</div>
-    </div>
-  </div>
-</div>
-<div class="mySlides">
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf17.jpg">
-      <div class="bottom-left"><del>Rs.1995</del></div>
-      <div class="bottom-right">Rs.997</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf18.jpg">
-      <div class="bottom-left"><del>Rs.899</del></div>
-      <div class="bottom-right">Rs.719</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf19.jpg">
-      <div class="bottom-left"><del>Rs.1899</del></div>
-      <div class="bottom-right">Rs.1329</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf20.jpg">
-      <div class="bottom-left"><del>Rs.2099</del></div>
-      <div class="bottom-right">Rs.1259</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf21.jpg">
-      <div class="bottom-left"><del>Rs.2499</del></div>
-      <div class="bottom-right">Rs.1749</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf22.jpg">
-      <div class="bottom-left"><del>Rs.6999</del></div>
-      <div class="bottom-right">Rs.4549</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf23.jpg">
-      <div class="bottom-left"><del>Rs.599</del></div>
-      <div class="bottom-right">Rs.499</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf24.jpg">
-      <div class="bottom-left"><del>Rs.499</del></div>
-      <div class="bottom-right">Rs.399</div>
-    </div>
-  </div>
-</div>
-<div class="mySlides">
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf25.jpg">
-      <div class="bottom-left"><del>Rs.2295</del></div>
-      <div class="bottom-right">Rs.1147</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf26.jpg">
-      <div class="bottom-left"><del>Rs.3299</del></div>
-      <div class="bottom-right">Rs.1649</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf27.jpg">
-      <div class="bottom-left"><del>Rs.999</del></div>
-      <div class="bottom-right">Rs.799</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf28.jpg">
-      <div class="bottom-left"><del>Rs.1190</del></div>
-      <div class="bottom-right">Rs.892</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf29.jpg">
-      <div class="bottom-left"><del>Rs.3999</del></div>
-      <div class="bottom-right">Rs.2399</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf30.jpg">
-      <div class="bottom-right">Rs.599</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf31.jpg">
-      <div class="bottom-right">Rs.799</div>
-    </div>
-  </div>
-  <div class="blk">
-    <div class="container">
-      <img src="WF/wf32.jpg">
-      <div class="bottom-right">Rs.699</div>
-    </div>
-  </div>
-</div>
+<?php display(); ?>
 <button class="before"style="vertical-align:middle" onclick="plusDivs(-1)"><span>Previous</span></button>
 <button class="after" style="vertical-align:middle" onclick="plusDivs(1)"><span>Next</span></button>
 
 </div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
-
+<script src='script.js' type="text/javascript"></script>
 </body>
 
 <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->

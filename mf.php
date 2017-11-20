@@ -1,3 +1,4 @@
+<?php include("auth.php"); ?>
 <?php require 'itemdisp.php'?>
 <html>
 <head>
@@ -5,44 +6,6 @@
 <style>
 
 body {margin:0;}
-
-.container {
-    position: relative;
-    text-align: center;
-    color: black;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 0px;
-    left: 5px;
-}
-
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
-
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 0px;
-    right: 5px;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 .before {
   display: inline-block;
@@ -124,11 +87,7 @@ body {margin:0;}
   opacity: 1;
   right: -30px;
 }
-.main {
-    margin-left:20%;padding:0px 16px;
-margin-top: 56px; /* Add a top margin to avoid content overlay */
-    z-index: -1;
-}
+
 
 </style>
 
@@ -139,9 +98,9 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
 <div class="nav">
 
     <ul>
-      <li><big><strong><a class="active" href="proj.html">HOME</a></big></strong></li>
+      <li><big><strong><a class="active" href="proj.php">HOME</a></big></strong></li>
       <li class="dropdown">
-        <a href="#men" class="dropbtn">MEN</a>
+        <a href="men.php" class="dropbtn">MEN</a>
         <div class="dropdown-content">
           <a href="mt.php?name=MT">T-Shirts</a>
           <a href="ms.php?name=MS">Shirts</a>
@@ -152,7 +111,7 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
         </div>
       </li>
       <li class="dropdown">
-        <a href="#women" class="dropbtn">WOMEN</a>
+        <a href="women.php" class="dropbtn">WOMEN</a>
         <div class="dropdown-content">
             <a href="we.php?name=WE">Ethnicwear</a>
             <a href="wt.php?name=WT">Tops</a>
@@ -176,6 +135,14 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
           <a href="ma.php?name=MA">Men's Accessories</a>
         </div>
       </li>
+      <li  id="cart">
+
+        <a href="cart.php">CART</a>
+    </li>
+      <li style="float:right;" >
+
+        <a href="logout.php"  >LOGOUT</a>
+      </li>
     </ul>
 </div>
 <div class="sidebar">
@@ -183,7 +150,7 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
     <li><a  href="mt.php?name=MT">T-Shirts</a></li>
     <li><a href="ms.php?name=MS">Shirts</a></li>
     <li><a href="mb.php?name=MB">Bottoms</a></li>
-    <li><a href="mspo.php?name=MPSO">Sportswear</a></li>
+    <li><a href="mspo.php?name=MSPO">Sportswear</a></li>
     <li>  <a href="ma.php?name=MA">Accessories</a></li>
     <li><a class="active" href="mf.php?name=MF">Footwear</a></li>
 </ul>
@@ -198,26 +165,7 @@ margin-top: 56px; /* Add a top margin to avoid content overlay */
 
 </div>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
-
+<script src='script.js' type="text/javascript"></script>
 </body>
 
 <!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
