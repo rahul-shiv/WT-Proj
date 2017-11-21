@@ -198,11 +198,11 @@ else{
             $getmain=mysqli_query($conn,$querymain);
             $rowmain = mysqli_fetch_assoc($getmain);
             echo "<div class='item'>";
-                echo "<div class='buttons'>";
+                echo "<button >";
                     echo "<a class='delete-btn' href='docart.php?do=remove&id=".$row['ID']."'>x</a>";
-                echo "</div>";
+                echo "</button>";
 
-                echo "<div clas='image'>";
+                echo "<div class='image'>";
                     echo "<img style='height:98px; padding-right:10px;' src='".$rowmain['IMGSRC']."'>";
                 echo "</div>";
 
@@ -216,10 +216,10 @@ else{
                 echo "</div>";
 
                 echo '<div class="quantity">';
-                    echo "<a href='docart.php?do=inc&id=".$row['ID']."&count=".$row['COUNT']."'><button class='plus-btn' name='button' type='button'>+</button></a>";
+                    echo "<a href='docart.php?do=inc&id=".$row['ID']."&count=".$row['COUNT']."'><button class='plus-btn' >+</button></a>";
                     echo "<input type='text' disabled='true' name='name' value='".$row['COUNT']."'>";
                    // echo "<span>".$row['COUNT']."</span>";
-                   echo "<a href='docart.php?do=dec&id=".$row['ID']."&count=".$row['COUNT']."'><button class='minus-btn' name='button' type='button'>-</button></a>";
+                   echo "<a href='docart.php?do=dec&id=".$row['ID']."&count=".$row['COUNT']."'><button class='minus-btn' >-</button></a>";
                 echo'</div>';
                 $price = $rowmain['DISCOUNTEDPRICE']*$row['COUNT'];
                 $total+=$price;

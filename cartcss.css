@@ -30,20 +30,12 @@ body {
   margin-right: 60px;
 }
 
-.delete-btn {
-    background-color: lightgray;
-    border-radius: 5px;
-    text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  width: 18px;
-  height: 17px;
-  margin-right: 20px;
-}
+
 
 /* Product Image */
 .image {
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 /* Product Description */
@@ -75,9 +67,10 @@ button {
   height: 30px;
   border-radius: 6px;
   border: none;
-  margin-top: 3px;
-  padding: 1px 6px;
+
+  padding: 1px 10px;
   cursor: pointer;
+  background-color: lightgray;
 }
 .minus-btn img {
   margin-bottom: 3px;
