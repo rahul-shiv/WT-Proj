@@ -157,7 +157,7 @@ body {margin:0;}
 </ul>
 </div>
 <div class="main">
-<!-- <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p> -->
+
 <?php display(); ?>
 <button class="before"style="vertical-align:middle" onclick="plusDivs(-1)"><span>Previous</span></button>
 <button class="after" style="vertical-align:middle" onclick="plusDivs(1)"><span>Next</span></button>
@@ -166,5 +166,5 @@ body {margin:0;}
 <script src='script.js' type="text/javascript"></script>
 </body>
 
-<!-- Mirrored from www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_fixed by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 13 Mar 2016 11:04:36 GMT -->
+
 </html>
