@@ -80,7 +80,7 @@
 }
 
 .sidebar li a.active {
-    background-color: #4CAF50;
+    background-color: blue;
     color: white;
 }
 
@@ -108,7 +108,7 @@
 .main{
     background-color: #222;
     height:100%;
-    width:100%;
+
     margin-top: 3.8%;
     position:fixed;
     margin-left:20%;padding:0px 16px; /* Add a top margin to avoid content overlay */
