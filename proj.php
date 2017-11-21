@@ -133,7 +133,7 @@
 <br><br><br>
 <center>
 <section class="w3-row-padding">
-  <article class="w3-half">
+  <span class="w3-half">
     <a href="men.php" style="text-decoration:none;"><h2>MEN</h2></a>
     <a href="men.php"><img src="botguy.jpg" alt="Random Name" style="width:50%"></a>
 
@@ -145,8 +145,8 @@
 		<li><a href="ma.php?name=MA">Accessories</a><br></li>
 		<li><a href="mf.php?name=MF">Footwear</a></li>
 	</ul>
-</article>
-  <article class="w3-half">
+</span>
+  <span class="w3-half">
     <a href="women.php" style="text-decoration:none;"><h2>WOMEN</h2></a>
     <a href="women.php"><img src="botgirl.jpg" alt="Random Name" style="width:50%"></a>
 	<ul class="bot1" style='position:relative;left:29%'>
@@ -157,6 +157,7 @@
 		<li><a href="wa.php?name=WA">Accessories</a><br></li>
 		<li><a href="wf.php?name=WF">Footwear</a></li>
   </ul>
+</span>
 </section>
 </center>
 <br><br><br><br>
